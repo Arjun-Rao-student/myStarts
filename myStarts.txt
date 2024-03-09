@@ -1,6 +1,6 @@
 ## base steps
->>>> dirsearch -e php,asp,aspx,jsp.py.txt,conf,config,bak,backup,swp,old,db,sql -u <target>
->>>> ffuf -recursion mc all -ac -c -e .htm,.shtml,.php,.html,.js,.txt,.zip,.bak,.asp,.aspx,.xml,.sql,.old,.at,.inc w path u https://target.com/FUZZ -t 5000
+>>>> dirsearch -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sql -u <target>
+>>>> ffuf -recursion mc all -ac -c -e .htm,.shtml,.php,.html,.js,.txt,.zip,.bak,.asp,.aspx,.xml,.sql,.old,.at,.inc -w path -u https://target.com/FUZZ -t 5000
 
 >>>> google darks -inurl: http | inurl: url= |inurl: path= | inurl: dest=| inurl: html=| inurl:data=| inurl: domain= |inurl : page= inurl: site: target.com
 >>>>>>>>>>>>>>>>> -inurl: include | inurl: dir | inurl: detail= | inurl: file= | inurl: folder= | inurl: inc= | inurl: locate= | inurl: doc= | inurl: conf= inurl & site target.com
