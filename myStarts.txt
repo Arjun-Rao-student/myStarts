@@ -1,0 +1,71 @@
+## base steps
+>>>> dirsearch -e php,asp,aspx,jsp.py.txt,conf,config,bak,backup,swp,old,db,sql -u <target>
+>>>> ffuf -recursion mc all -ac -c -e .htm,.shtml,.php,.html,.js,.txt,.zip,.bak,.asp,.aspx,.xml,.sql,.old,.at,.inc w path u https://target.com/FUZZ -t 5000
+
+>>>> google darks -inurl: http | inurl: url= |inurl: path= | inurl: dest=| inurl: html=| inurl:data=| inurl: domain= |inurl : page= inurl: site: target.com
+>>>>>>>>>>>>>>>>> -inurl: include | inurl: dir | inurl: detail= | inurl: file= | inurl: folder= | inurl: inc= | inurl: locate= | inurl: doc= | inurl: conf= inurl & site target.com
+>>>>>>>>>>>>>>>>> -inurl: cmd | inurl: exec= | inurl: query= | inurl: code= | inurl: do= | inurl: run= | inurl: read= | inurl: ping= inurl : & site target.com
+>>>>>>>>>>>>>>>>> -inurl: config | inurl: env | inurl: setting | inurl: backup | inurl : admin | inurl: php site: target [.]com -inurl : email= I inuxl : phone= | inurl: password= I site: target [.]com
+>>>>>>>>>>>>>>>>> -inurl: apidocs I inurl: api-docs I inurl: swagger site "target [.]com" inurl: secret= inurl: & I inurl: api-explorer 
+>>>>>>>>>>>>>>>>> -site: target.com ext: php inurl:? - site: openbugbounty.org inurl: reports intext: "target.com"
+>>>>>>>>>>>>>>>>> -inurl: q= | inurl s= | inurl: search= | inurl: query= | inurl: keyword= | inurl: lang= inurl & site target.com
+>>>>>>>>>>>>>>>>> -site: "target[.]com" ext: log | ext txt | ext: conf | ext: cnf | ext: ini | ext: env | ext: sh | ext: bak | ext: backup | ext: swp | ext: old | ext: ~ | ext: git | ext: svn | ext: htpasswd | ext: htaccess
+>>>>>>>>>>>>>>>>> -inurl: url= | inurl: return= | Inurl: next= | inurl: redirect= | inurl: redir= | inurl: ret= | inurl: r2= | inurl: page= inurl: & inurl http site: target.com
+>>>>>>>>>>>>>>>>> -inurl: id= | inurl: pid= | inurl: category= | inurl: cat= | inurl: action= | inurl: sid= | inurl: dir= inurl: & site target.com
+## Finding SQL Injection with Google Dorks
+>>>>>>>>>>>>>>>>> -intitle: "Employee Intranet Login" inurl: pop.php?id= 
+>>>>>>>>>>>>>>>>> -"Target.com" inurl: index.php?id=
+>>>>>>>>>>>>>>>>> -intitle: "ePowerSwitch Login" inurl: rub.php?id=
+>>>>>>>>>>>>>>>>> -intitle: "Docutek ERes - Admin Login" edu inurl: page.php?file=
+>>>>>>>>>>>>>>>>> -intitle: "EXTRANET login" -.edu.mil.gov inurl: index.php?id=
+>>>>>>>>>>>>>>>>> -intitle: "ITS System Information" "Please log on to the SAP System" inurl: sql.php?id=
+>>>>>>>>>>>>>>>>> -intitle: "microsoft certificate services" inurl: certsrv -intitle: "MailMan Login" inurl: "ViewerFrame?Mode="
+## finding reflected xss
+>>>>>>>>>>>>>>>>> site:target[dot]com inurl:& 
+>>>>>>>>>>>>>>>>> site: target[dot]com inurl:php
+>>>>>>>>>>>>>>>>> site:target[dot]com inurl:jsp
+>>>>>>>>>>>>>>>>> site:*.host.com ext:jspx
+>>>>>>>>>>>>>>>>> site:*.host.com ext:do
+>>>>>>>>>>>>>>>>> site:*.host.com ext:action
+##code leaks
+>>>>>>>>>>>>>>>>> -site pastebin.com "target.com"
+>>>>>>>>>>>>>>>>> -site: jsfiddle.net "target.com"
+>>>>>>>>>>>>>>>>> -site: codebeautify.org "target.com"
+>>>>>>>>>>>>>>>>> -site: codepen.io "target.com"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
