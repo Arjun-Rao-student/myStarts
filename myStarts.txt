@@ -37,6 +37,7 @@ mantra
 katana 
 js filter
 
+aws s3 ls s3://staging-backend-bucket/ --no-sign-request --recursive
 
 
 
